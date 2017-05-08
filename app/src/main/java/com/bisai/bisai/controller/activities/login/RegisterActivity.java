@@ -62,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterCallb
         password = (EditText) findViewById(R.id.password);
         password2 = (EditText) findViewById(R.id.password2);
 
-      Button registerButton= (Button) findViewById(R.id.register_button2);
+        Button registerButton= (Button) findViewById(R.id.register_button2);
         registerButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterCallb
         View focusView = null;
 
         // Check for a valid baskets, if the user entered one.
-         if (TextUtils.isEmpty(usernameDTO)) {
+        if (TextUtils.isEmpty(usernameDTO)) {
             username.setError(getString(R.string.error_field_required));
             focusView = username;
             cancel = true;
@@ -132,7 +132,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterCallb
             RegisterManager.getInstance(v.getContext()).registerAccount(RegisterActivity.this, userDTO);
             Intent i = new Intent(v.getContext(), LoginActivity.class);
             startActivity(i);
-            Toast.makeText(getApplicationContext(),"Creado nuevo usuario " + userDTO.getLogin(), Toast.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(),"Creado nuevo usuario " + userDTO.getLogin(),Toast.LENGTH_LONG);
         }
     }
 
@@ -183,4 +183,3 @@ public class RegisterActivity extends AppCompatActivity implements RegisterCallb
     }
 
 }
-

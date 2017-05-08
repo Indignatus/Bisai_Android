@@ -12,7 +12,7 @@ import retrofit2.http.POST;
  */
 
 public interface RegisterService {
-    @POST("api/register")
+    @POST("api/register/app")
     Call<Void> registerAccount(
             @Body UserDTO userDTO
     );
