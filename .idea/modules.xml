@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bisai.iml" filepath="$PROJECT_DIR$/Bisai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bisai_Android.iml" filepath="$PROJECT_DIR$/Bisai_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
