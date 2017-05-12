@@ -13,11 +13,11 @@ public class Equipo {
 
     private Long id;
     private String nombre;
-    private Date fechaCreacion;
+    private String fechaCreacion;
     private String password;
     private Set<Jugador> jugadors = new HashSet<>();
 
-    public Equipo(Long id, Set<Jugador> jugadors, String password, Date fechaCreacion, String nombre) {
+    public Equipo(Long id, Set<Jugador> jugadors, String password, String fechaCreacion, String nombre) {
         this.id = id;
         this.jugadors = jugadors;
         this.password = password;
@@ -74,11 +74,11 @@ public class Equipo {
         this.password = password;
     }
 
-    public Date getFechaCreacion() {
+    public String getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Date fechaCreacion) {
+    public void setFechaCreacion(String fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 

@@ -29,6 +29,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".controller.activities.login.LoginActivity" />
         </activity>
+        <activity android:name=".controller.activities.TeamListActivity"></activity>
     </application>
 
 </manifest>
