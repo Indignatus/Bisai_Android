@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.bisai.bisai.R;
-import com.bisai.bisai.controller.activities.TeamListActivity;
+import com.bisai.bisai.controller.activities.master_detail.TeamListActivity;
 
 public class MainActivity extends AppCompatActivity {
 

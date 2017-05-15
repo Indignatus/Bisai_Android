@@ -9,6 +9,7 @@ import java.util.List;
  */
 
 public interface TeamCallback {
-    void onSuccessTeam(List<Equipo> teamList);
+    void onSuccessTeams(List<Equipo> teamList);
+    void onSuccessTeam(Equipo equipo);
     void onFailure(Throwable t);
 }

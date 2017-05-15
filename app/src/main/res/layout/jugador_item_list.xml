@@ -7,12 +7,12 @@
     android:weightSum="1">
 
     <TextView
-        android:id="@+id/nombreequipo"
+        android:id="@+id/jugador"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="32dp"
         android:layout_gravity="center_vertical"
         android:layout_marginRight="10dp"
-        android:text="PASALAVISA"
+        android:text="Jugador"
         android:textAlignment="center"
         android:textSize="18sp" />
 

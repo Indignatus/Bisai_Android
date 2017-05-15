@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bisai.bisai">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -17,19 +18,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".controller.activities.main.MainActivity" />
         <activity
             android:name=".controller.activities.login.RegisterActivity"
             android:label="Registrar usuario"
-            android:parentActivityName=".controller.activities.login.LoginActivity"
-            >
+            android:parentActivityName=".controller.activities.login.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".controller.activities.login.LoginActivity" />
         </activity>
-        <activity android:name=".controller.activities.TeamListActivity"></activity>
+        <activity android:name=".controller.activities.master_detail.TeamListActivity" />
+        <activity android:name=".controller.activities.master_detail.TeamDetail"></activity>
     </application>
 
 </manifest>

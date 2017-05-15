@@ -46,7 +46,7 @@ public class TeamManager {
                 equipoList = response.body();
                 int code = response.code();
                 if(code == 200 || code == 201){
-                    teamCallback.onSuccessTeam(equipoList);
+                    teamCallback.onSuccessTeams(equipoList);
                 }else {
                     teamCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
                 }
@@ -67,6 +67,30 @@ public class TeamManager {
             }
         }
         return null;
+    }
+
+    public synchronized void getEquipoById(long id, final TeamCallback teamCallback){
+
+        Call<Equipo> call = teamService.getEquipoById(UserLoginManager.getInstance().getBearerToken(), id);
+        call.enqueue(new Callback<Equipo>() {
+            @Override
+            public void onResponse(Call<Equipo> call, Response<Equipo> response) {
+                Equipo equipo = response.body();
+                int code = response.code();
+                if(code == 200 || code == 201){
+                    teamCallback.onSuccessTeam(equipo);
+                }else {
+                    teamCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Equipo> call, Throwable t) {
+                Log.e("TeamManager->",t.toString());
+                teamCallback.onFailure(t);
+            }
+        });
+
     }
 
     //POST

@@ -1,7 +1,9 @@
 package com.bisai.bisai.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -15,9 +17,9 @@ public class Equipo {
     private String nombre;
     private String fechaCreacion;
     private String password;
-    private Set<Jugador> jugadors = new HashSet<>();
+    private List<Jugador> jugadors = new ArrayList<>();
 
-    public Equipo(Long id, Set<Jugador> jugadors, String password, String fechaCreacion, String nombre) {
+    public Equipo(Long id, List<Jugador> jugadors, String password, String fechaCreacion, String nombre) {
         this.id = id;
         this.jugadors = jugadors;
         this.password = password;
@@ -58,11 +60,11 @@ public class Equipo {
         this.id = id;
     }
 
-    public Set<Jugador> getJugadors() {
+    public List<Jugador> getJugadors() {
         return jugadors;
     }
 
-    public void setJugadors(Set<Jugador> jugadors) {
+    public void setJugadors(List<Jugador> jugadors) {
         this.jugadors = jugadors;
     }
 
