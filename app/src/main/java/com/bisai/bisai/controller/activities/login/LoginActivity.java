@@ -20,14 +20,16 @@ import android.widget.TextView;
 
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.main.MainActivity;
+import com.bisai.bisai.controller.managers.JugadorCallback;
 import com.bisai.bisai.controller.managers.LoginCallback;
 import com.bisai.bisai.controller.managers.UserLoginManager;
+import com.bisai.bisai.model.Jugador;
 import com.bisai.bisai.model.UserToken;
 
 /**
  * A login screen that offers login via username/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoginCallback {
+public class LoginActivity extends AppCompatActivity implements LoginCallback, JugadorCallback {
 
     // UI references.
     private AutoCompleteTextView mEmailView;
@@ -128,6 +130,11 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void onSuccessJugador(Jugador jugador) {
+
     }
 
     @Override
