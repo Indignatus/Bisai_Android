@@ -30,6 +30,9 @@
         </activity>
         <activity android:name=".controller.activities.master_detail.TeamListActivity" />
         <activity android:name=".controller.activities.master_detail.TeamDetail"></activity>
+
+        <activity android:name=".controller.activities.master_detail.TorneoListActivity" />
+        <activity android:name=".controller.activities.master_detail.TorneoDetail"></activity>
     </application>
 
 </manifest>
