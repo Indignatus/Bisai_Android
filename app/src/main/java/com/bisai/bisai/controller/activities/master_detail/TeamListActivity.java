@@ -15,7 +15,9 @@ import android.widget.TextView;
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.managers.TeamCallback;
 import com.bisai.bisai.controller.managers.TeamManager;
+import com.bisai.bisai.controller.managers.UserLoginManager;
 import com.bisai.bisai.model.Equipo;
+import com.bisai.bisai.model.Jugador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +39,22 @@ public class TeamListActivity extends AppCompatActivity implements TeamCallback 
 
     @Override
     public void onSuccessTeams(List<Equipo> teamList) {
-        equipos=teamList;
-        listaEquipos.setAdapter(new TeamsAdapter(this, teamList));
+        List<Equipo> equiposs = new ArrayList<>();
+        boolean isHear;
+        for (Equipo e : teamList){
+            isHear = false;
+            for (Jugador j : e.getJugadors()){
+                if(j.getId() == UserLoginManager.getInstance().getJugador().getId()){
+                    isHear = true;
+                }
+            }
+            if (!isHear){
+                equiposs.add(e);
+            }
+
+        }
+        equipos=equiposs;
+        listaEquipos.setAdapter(new TeamsAdapter(this, equipos));
     }
 
     @Override
