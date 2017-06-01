@@ -34,9 +34,6 @@ public class RegisterActivity extends AppCompatActivity implements RegisterCallb
     private EditText password2;
     private UserDTO userDTO;
 
-    // ATTR
-    String playerPosicionCampo;
-
     private View mProgressView;
     private View mAddFormView;
 

@@ -1,9 +1,7 @@
 package com.bisai.bisai.controller.activities.master_detail;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bisai.bisai.R;
-import com.bisai.bisai.controller.activities.main.MainActivity;
 import com.bisai.bisai.controller.managers.TeamCallback;
 import com.bisai.bisai.controller.managers.TeamManager;
 import com.bisai.bisai.model.Equipo;
@@ -26,13 +23,12 @@ import java.util.List;
  * Created by sergi on 15/05/2017.
  */
 // detalle de un team son los jugadores  de un equipo
-public class TeamDetail extends AppCompatActivity implements TeamCallback {
+public class TeamJugadorDetail extends AppCompatActivity implements TeamCallback {
 
 
     private ListView listaJugadores;
     private List<Jugador> jugadores;
     private Equipo equipo;
-    private FloatingActionButton addPlayer;
     private Bundle extras;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,22 +37,12 @@ public class TeamDetail extends AppCompatActivity implements TeamCallback {
         extras = getIntent().getExtras();
         Long equipoId = extras.getLong("team");
 
-        setContentView(R.layout.team_detail);
+        setContentView(R.layout.activity_detail_team_jugador);
         jugadores = new ArrayList<>();
         listaJugadores = (ListView) findViewById(R.id.listajugadores);
         // al clicar encima de uno de los equipos
 
-        TeamManager.getInstance().getEquipoById(equipoId, TeamDetail.this);
-        addPlayer = (FloatingActionButton) findViewById(R.id.addPlayer1);
-        addPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i = new Intent(TeamDetail.this, MainActivity.class);
-                    startActivity(i);
-                }
-            });
-
-
+        TeamManager.getInstance().getEquipoById(equipoId, TeamJugadorDetail.this);
     }
 
     @Override
@@ -122,7 +108,7 @@ public class TeamDetail extends AppCompatActivity implements TeamCallback {
 
 
 
-            TeamDetail.JugadoresAdapter.ViewHolder holder = (TeamDetail.JugadoresAdapter.ViewHolder) myView.getTag();
+            TeamJugadorDetail.JugadoresAdapter.ViewHolder holder = (TeamJugadorDetail.JugadoresAdapter.ViewHolder) myView.getTag();
 
             //Voy asignando los datos
             Jugador jugador = equipo.getJugadors().get(position);

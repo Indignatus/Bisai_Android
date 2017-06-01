@@ -19,6 +19,9 @@ public class Equipo {
     private String password;
     private List<Jugador> jugadors = new ArrayList<>();
 
+    public Equipo() {
+    }
+
     public Equipo(Long id, List<Jugador> jugadors, String password, String fechaCreacion, String nombre) {
         this.id = id;
         this.jugadors = jugadors;

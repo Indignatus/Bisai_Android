@@ -29,7 +29,10 @@
                 android:value=".controller.activities.login.LoginActivity" />
         </activity>
         <activity android:name=".controller.activities.master_detail.TeamListActivity" />
-        <activity android:name=".controller.activities.master_detail.TeamDetail"></activity>
+        <activity android:name=".controller.activities.master_detail.TeamPlayerListActivity" />
+        <activity android:name=".controller.activities.master_detail.TeamDetail" />
+        <activity android:name=".controller.activities.master_detail.TeamJugadorDetail" />
+        <activity android:name=".controller.activities.master_detail.AddPlayerActivity"></activity>
     </application>
 
 </manifest>

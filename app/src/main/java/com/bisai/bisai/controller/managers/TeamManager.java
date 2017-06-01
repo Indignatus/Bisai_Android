@@ -1,6 +1,8 @@
 package com.bisai.bisai.controller.managers;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.bisai.bisai.controller.services.TeamService;
 import com.bisai.bisai.controller.util.CustomProperties;
@@ -23,6 +25,7 @@ public class TeamManager {
     private List<Equipo> equipoList;
     private Retrofit retrofit;
     private TeamService teamService;
+    private Context context;
 
     private TeamManager(){
         retrofit = new Retrofit.Builder().baseUrl(CustomProperties.baseUrl).addConverterFactory(GsonConverterFactory.create()).build();
@@ -95,9 +98,49 @@ public class TeamManager {
 
     //POST
 
+    public synchronized void registerAccount(final TeamCallback teamCallback, Equipo equipo) {
+        Call<Equipo> call = teamService.registerEquipo(equipo, UserLoginManager.getInstance().getBearerToken());
+        call.enqueue(new Callback<Equipo>() {
+            @Override
+            public void onResponse(Call<Equipo> call, Response<Equipo> response) {
+                int code = response.code();
 
+                if (code == 200 || code == 201) {
+                    teamCallback.onSuccessTeam(response.body());
+
+                } else {
+                    teamCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Equipo> call, Throwable t) {
+            }
+        });
+    }
 
     //PUT
+
+    public synchronized void addJugadorEquipo (final TeamCallback teamCallback, long idEquipo, long idJugador, String password) {
+        Call<Equipo> call = teamService.addJugadorEquipo(idJugador, idEquipo, password, UserLoginManager.getInstance().getBearerToken());
+        call.enqueue(new Callback<Equipo>() {
+            @Override
+            public void onResponse(Call<Equipo> call, Response<Equipo> response) {
+                int code = response.code();
+
+                if (code == 200 || code == 201) {
+                    teamCallback.onSuccessTeam(response.body());
+
+                } else {
+                    teamCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Equipo> call, Throwable t) {
+            }
+        });
+    }
 
 
 
