@@ -12,6 +12,7 @@ import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.main.MainActivity;
 import com.bisai.bisai.controller.managers.TeamCallback;
 import com.bisai.bisai.controller.managers.TeamManager;
+import com.bisai.bisai.controller.managers.UserLoginManager;
 import com.bisai.bisai.model.Equipo;
 
 import java.util.Date;
@@ -76,6 +77,7 @@ public class AddPlayerActivity extends AppCompatActivity implements TeamCallback
             nombreEquipo.setText("Esto no va");
             // mostrar toast erroneo
         }else{
+            equipo.getJugadors().add(UserLoginManager.getInstance().getJugador());
             TeamManager.getInstance().registerAccount(AddPlayerActivity.this, equipo);
             Intent i = new Intent(AddPlayerActivity.this, MainActivity.class);
             startActivity(i);

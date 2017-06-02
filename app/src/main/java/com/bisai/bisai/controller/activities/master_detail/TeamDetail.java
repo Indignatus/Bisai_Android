@@ -39,7 +39,7 @@ public class TeamDetail extends AppCompatActivity implements TeamCallback {
 
         super.onCreate(savedInstanceState);
         extras = getIntent().getExtras();
-        Long equipoId = extras.getLong("team");
+        final Long equipoId = extras.getLong("team");
 
         setContentView(R.layout.team_detail);
         jugadores = new ArrayList<>();
@@ -51,7 +51,8 @@ public class TeamDetail extends AppCompatActivity implements TeamCallback {
         addPlayer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(TeamDetail.this, MainActivity.class);
+                    Intent i = new Intent(TeamDetail.this, passwordTeamAddPlayer.class);
+                    i.putExtra("idTeam", equipoId);
                     startActivity(i);
                 }
             });

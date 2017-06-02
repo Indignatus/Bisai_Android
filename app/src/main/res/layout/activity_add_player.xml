@@ -27,7 +27,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Contraseña"
         android:ems="10"
         android:layout_below="@+id/nameEquipo"
         android:layout_alignParentLeft="true"
@@ -35,26 +34,26 @@
         android:layout_marginTop="16dp"
         android:id="@+id/pass"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Contraseña" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Nombre del equipo"
         android:ems="10"
         android:id="@+id/nameEquipo"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Nombre del equipo" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Repite la contraseña"
         android:ems="10"
         android:layout_marginTop="18dp"
         android:id="@+id/pass2"
@@ -62,5 +61,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Repite la contraseña" />
 </RelativeLayout>

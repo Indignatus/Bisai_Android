@@ -32,7 +32,8 @@
         <activity android:name=".controller.activities.master_detail.TeamPlayerListActivity" />
         <activity android:name=".controller.activities.master_detail.TeamDetail" />
         <activity android:name=".controller.activities.master_detail.TeamJugadorDetail" />
-        <activity android:name=".controller.activities.master_detail.AddPlayerActivity"></activity>
+        <activity android:name=".controller.activities.master_detail.AddPlayerActivity" />
+        <activity android:name=".controller.activities.master_detail.passwordTeamAddPlayer" />
     </application>
 
 </manifest>

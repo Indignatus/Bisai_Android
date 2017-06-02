@@ -122,7 +122,7 @@ public class TeamManager {
     //PUT
 
     public synchronized void addJugadorEquipo (final TeamCallback teamCallback, long idEquipo, long idJugador, String password) {
-        Call<Equipo> call = teamService.addJugadorEquipo(idJugador, idEquipo, password, UserLoginManager.getInstance().getBearerToken());
+        Call<Equipo> call = teamService.addJugadorEquipo(idEquipo, idJugador, password, UserLoginManager.getInstance().getBearerToken());
         call.enqueue(new Callback<Equipo>() {
             @Override
             public void onResponse(Call<Equipo> call, Response<Equipo> response) {
