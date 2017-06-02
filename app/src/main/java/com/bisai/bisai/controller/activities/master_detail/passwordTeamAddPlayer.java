@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.main.MainActivity;
+import com.bisai.bisai.controller.activities.main.MainActivityMenu;
 import com.bisai.bisai.controller.managers.TeamCallback;
 import com.bisai.bisai.controller.managers.TeamManager;
 import com.bisai.bisai.controller.managers.UserLoginManager;
@@ -48,7 +49,7 @@ public class passwordTeamAddPlayer extends AppCompatActivity implements TeamCall
         String pass = password.getText().toString();
 
         TeamManager.getInstance().addJugadorEquipo(passwordTeamAddPlayer.this, equipoId, userId, pass);
-        Intent i = new Intent(passwordTeamAddPlayer.this, MainActivity.class);
+        Intent i = new Intent(passwordTeamAddPlayer.this, MainActivityMenu.class);
         startActivity(i);
 
 
