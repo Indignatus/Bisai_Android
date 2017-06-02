@@ -6,6 +6,7 @@
     android:padding="25dp"
     android:weightSum="1">
 
+
     <TextView
         android:id="@+id/jugador"
         android:layout_width="match_parent"
@@ -15,5 +16,6 @@
         android:text="Jugador"
         android:textAlignment="center"
         android:textSize="18sp" />
+
 
 </LinearLayout>
