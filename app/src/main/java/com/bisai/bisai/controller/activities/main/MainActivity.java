@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.master_detail.AddPlayerActivity;
+import com.bisai.bisai.controller.activities.master_detail.PerfilUser;
 import com.bisai.bisai.controller.activities.master_detail.TeamListActivity;
 import com.bisai.bisai.controller.activities.master_detail.TeamPlayerListActivity;
 import com.bisai.bisai.controller.managers.UserLoginManager;

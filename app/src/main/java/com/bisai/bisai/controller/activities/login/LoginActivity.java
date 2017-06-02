@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.main.MainActivity;
+import com.bisai.bisai.controller.activities.main.MainActivityMenu;
 import com.bisai.bisai.controller.managers.JugadorCallback;
 import com.bisai.bisai.controller.managers.LoginCallback;
 import com.bisai.bisai.controller.managers.UserLoginManager;
@@ -127,7 +128,7 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback, J
     public void onSuccess(UserToken userToken) {
         showProgress(false);
 
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivityMenu.class);
         startActivity(intent);
         finish();
     }
