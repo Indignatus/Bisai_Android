@@ -26,9 +26,10 @@ public class TorneosFinalizados extends AppCompatActivity implements TorneoCallb
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_torneo_list);
+        setContentView(R.layout.activity_torneos_finalizados);
         torneos = new ArrayList<>();
-        listaTorneos = (ListView) findViewById(R.id.listatorneos);
+        listaTorneos = (ListView) findViewById(R.id.listatorneosFinalizador);
+
         //al clicar encima de uno de los equipos
 
         TorneoManager.getInstance().getAllTorneos(TorneosFinalizados.this);
@@ -42,8 +43,7 @@ public class TorneosFinalizados extends AppCompatActivity implements TorneoCallb
 
     @Override
     public void onSuccessTorneo(Torneo torneo) {
-        TextView equipoGanador = (TextView) findViewById(R.id.ganador);
-        equipoGanador.setText(torneo.getEquipoGanador().getNombre());
+
     }
 
     @Override
@@ -90,17 +90,18 @@ public class TorneosFinalizados extends AppCompatActivity implements TorneoCallb
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         Intent a = new Intent(TorneosFinalizados.this, MostrarEquipoGanador.class);
+                        a.putExtra("ganador", torneos.get(i).getEquipoGanador().getNombre());
                         startActivity(a);
-
                     }
                 });
 
             }
 
 
-            TorneoListActivity.TorneosAdapter.ViewHolder holder = (TorneoListActivity.TorneosAdapter.ViewHolder) myView.getTag();
+            TorneosAdapter.ViewHolder holder = (TorneosAdapter.ViewHolder) myView.getTag();
 
             //Vamos asignando los datos
+
             Torneo torneo = torneos.get(position);
             String nombre = torneo.getNombre() + "";
             holder.tvNombre.setText(nombre);
