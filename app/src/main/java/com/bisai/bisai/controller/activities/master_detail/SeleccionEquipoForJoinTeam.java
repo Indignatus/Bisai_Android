@@ -12,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.main.MainActivity;
@@ -136,10 +137,13 @@ public class SeleccionEquipoForJoinTeam extends AppCompatActivity implements Tea
                 listaEquipos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Toast toast1 = Toast.makeText(getApplicationContext(), "Exito al crear el equipo", Toast.LENGTH_SHORT);
                         long idEquipo = equipos.get(i).getId();
                         Intent a = new Intent(SeleccionEquipoForJoinTeam.this, MainActivityMenu.class);
                         TorneoManager.getInstance().addEquipoTorneo(SeleccionEquipoForJoinTeam.this, torneoId, idEquipo);
                         startActivity(a);
+                        toast1.show();
+
                     }
                 });
 
