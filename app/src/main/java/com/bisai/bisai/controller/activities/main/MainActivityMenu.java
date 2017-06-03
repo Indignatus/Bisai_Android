@@ -109,6 +109,7 @@ public class MainActivityMenu extends AppCompatActivity
             Intent i = new Intent(MainActivityMenu.this, TorneoListActivity.class);
             startActivity(i);
         }else if(id == R.id.nav_buscar_resultado_torneos){
+            // este ivan
             Intent i = new Intent(MainActivityMenu.this, TorneoListActivity.class);
             startActivity(i);
         }
