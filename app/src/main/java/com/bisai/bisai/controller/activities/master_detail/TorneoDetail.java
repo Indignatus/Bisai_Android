@@ -58,7 +58,6 @@ public class TorneoDetail extends AppCompatActivity implements TorneoCallback{
         TextView nombreTorneo = (TextView) findViewById(R.id.nombreTorneo);
         TextView nParticipantes = (TextView) findViewById(R.id.nParticipantes);
         TextView descripcion = (TextView) findViewById(R.id.descripcion);
-
         nombreTorneo.setText(torneo.getNombre());
         nParticipantes.setText("Numero maximo de participantes: " + torneo.getNumeroParticipantes());
         descripcion.setText("Descripcion: " + torneo.getDescripcion());
