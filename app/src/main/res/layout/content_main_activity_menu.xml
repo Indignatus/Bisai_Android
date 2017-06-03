@@ -14,7 +14,7 @@
     tools:showIn="@layout/app_bar_main_activity_menu">
 
     <TextView
-        android:text="Hola"
+        android:text="Agenda Torneos Pendientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
