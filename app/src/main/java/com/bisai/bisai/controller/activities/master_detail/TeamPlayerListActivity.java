@@ -26,6 +26,7 @@ public class TeamPlayerListActivity extends AppCompatActivity implements TeamCal
 
     ListView listaEquipos;
     List<Equipo> equipos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
