@@ -23,6 +23,10 @@
                 android:id="@+id/nav_buscar_torneos"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Buscar Torneos" />
+            <item
+                android:id="@+id/nav_buscar_resultado_torneos"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Buscar finalista torneo" />
 
         </menu>
     </item>

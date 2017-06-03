@@ -13,4 +13,14 @@
     tools:context="com.bisai.bisai.controller.activities.main.MainActivityMenu"
     tools:showIn="@layout/app_bar_main_activity_menu">
 
+    <TextView
+        android:text="Hola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
