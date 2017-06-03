@@ -137,7 +137,7 @@ public class SeleccionEquipoForJoinTeam extends AppCompatActivity implements Tea
                 listaEquipos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        Toast toast1 = Toast.makeText(getApplicationContext(), "Exito al crear el equipo", Toast.LENGTH_SHORT);
+                        Toast toast1 = Toast.makeText(getApplicationContext(), "Exito al añadir el equipo '"+equipos.get(i).getNombre()+"' en el torneo ", Toast.LENGTH_SHORT);
                         long idEquipo = equipos.get(i).getId();
                         Intent a = new Intent(SeleccionEquipoForJoinTeam.this, MainActivityMenu.class);
                         TorneoManager.getInstance().addEquipoTorneo(SeleccionEquipoForJoinTeam.this, torneoId, idEquipo);
