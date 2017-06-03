@@ -30,4 +30,10 @@ public interface TorneoService {
             @Path("idEquipo") Long idEquipo,
             @Header("Authorization") String Authorization
     );
+
+    @GET ("/api/torneos/pendiente/jugador/{id}")
+    Call<List<Torneo>> getTorneoPendienteJugador(
+            @Header("Authorization") String Authorization, @Path("id") Long id
+    );
+
 }
