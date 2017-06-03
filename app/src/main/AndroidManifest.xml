@@ -34,7 +34,9 @@
         <activity android:name=".controller.activities.master_detail.TeamJugadorDetail" />
         <activity android:name=".controller.activities.master_detail.AddPlayerActivity" />
         <activity android:name=".controller.activities.master_detail.passwordTeamAddPlayer" />
-        <activity android:name=".controller.activities.master_detail.PerfilUser" />
+        <activity android:name=".controller.activities.master_detail.TorneoListActivity" />
+        <activity android:name=".controller.activities.master_detail.TorneoDetail" />
+        <activity android:name=".controller.activities.master_detail.SeleccionEquipoForJoinTeam"></activity>
         <activity
             android:name=".controller.activities.main.MainActivityMenu"
             android:label="@string/title_activity_main_menu"

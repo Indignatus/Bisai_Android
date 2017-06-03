@@ -20,6 +20,7 @@ import com.bisai.bisai.controller.activities.login.LoginActivity;
 import com.bisai.bisai.controller.activities.master_detail.AddPlayerActivity;
 import com.bisai.bisai.controller.activities.master_detail.TeamListActivity;
 import com.bisai.bisai.controller.activities.master_detail.TeamPlayerListActivity;
+import com.bisai.bisai.controller.activities.master_detail.TorneoListActivity;
 import com.bisai.bisai.controller.managers.UserLoginManager;
 
 public class MainActivityMenu extends AppCompatActivity
@@ -105,7 +106,8 @@ public class MainActivityMenu extends AppCompatActivity
             Intent i = new Intent(MainActivityMenu.this, AddPlayerActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_buscar_torneos) {
-
+            Intent i = new Intent(MainActivityMenu.this, TorneoListActivity.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

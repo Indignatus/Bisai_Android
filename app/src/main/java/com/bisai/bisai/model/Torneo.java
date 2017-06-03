@@ -1,7 +1,9 @@
 package com.bisai.bisai.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -17,17 +19,17 @@ public class Torneo {
 
     private Integer numeroParticipantes;
 
-    private Date fechaInicio;
+    private String fechaInicio;
     private Boolean cancelado;
     private String descripcion;
     private Juego juego;
     private Set<Jugador> administradors = new HashSet<>();
     private Set<Local> locales = new HashSet<>();
-    private Set<Equipo> equipos = new HashSet<>();
+    private List<Equipo> equipos = new ArrayList<>();
     private Equipo equipoGanador;
 
 
-    public Torneo(Long id, Equipo equipoGanador, Set<Equipo> equipos, Set<Jugador> administradors, Set<Local> locales, String descripcion, Juego juego, Boolean cancelado, Date fechaInicio, Integer numeroParticipantes, String nombre) {
+    public Torneo(Long id, Equipo equipoGanador, List<Equipo> equipos, Set<Jugador> administradors, Set<Local> locales, String descripcion, Juego juego, Boolean cancelado, String fechaInicio, Integer numeroParticipantes, String nombre) {
         this.id = id;
         this.equipoGanador = equipoGanador;
         this.equipos = equipos;
@@ -57,11 +59,11 @@ public class Torneo {
         this.equipoGanador = equipoGanador;
     }
 
-    public Set<Equipo> getEquipos() {
+    public List<Equipo> getEquipos() {
         return equipos;
     }
 
-    public void setEquipos(Set<Equipo> equipos) {
+    public void setEquipos(List<Equipo> equipos) {
         this.equipos = equipos;
     }
 
@@ -97,11 +99,11 @@ public class Torneo {
         this.cancelado = cancelado;
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
