@@ -22,7 +22,8 @@
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/Base.Theme.AppCompat.Light">
 
         <LinearLayout
             android:id="@+id/username_login_form"

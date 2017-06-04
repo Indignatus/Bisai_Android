@@ -197,7 +197,7 @@ public class MainActivityMenu extends AppCompatActivity
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         Intent a = new Intent(MainActivityMenu.this, TorneoDetailPendientes.class);
                         a.putExtra("nombre", torneos.get(i).getNombre());
-                        a.putExtra("descipcion", torneos.get(i).getDescripcion());
+                        a.putExtra("descripcion", torneos.get(i).getDescripcion());
 
                         a.putExtra("fecha", torneos.get(i).getFechaInicio());
                         a.putExtra("juego", torneos.get(i).getJuego().getNombre());
