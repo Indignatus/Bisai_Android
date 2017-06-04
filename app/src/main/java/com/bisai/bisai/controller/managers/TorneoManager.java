@@ -79,6 +79,27 @@ public class TorneoManager {
             }
         });
     }
+    public synchronized void getBusquedaTorneoAcabado(final TorneoCallback torneoCallback){
+        Call<List<Torneo>> call = torneoService.getBusquedaTorneoAcabado( UserLoginManager.getInstance().getJugador().getId(), UserLoginManager.getInstance().getBearerToken());
+        call.enqueue(new Callback<List<Torneo>>() {
+            @Override
+            public void onResponse(Call<List<Torneo>> call, Response<List<Torneo>> response) {
+                torneoList = response.body();
+                int code = response.code();
+                if(code == 200 || code == 201){
+                    torneoCallback.onSuccessTorneos(torneoList);
+                }else{
+                    torneoCallback.onFailure(new Throwable("Error" + code + " , " + response.raw().message()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Torneo>> call, Throwable t) {
+                Log.e("TorneoManager->", t.toString());
+                torneoCallback.onFailure(t);
+            }
+        });
+    }
 
     public synchronized void getTorneoPendienteJugador(final TorneoCallback torneoCallback){
         Call<List<Torneo>> call = torneoService.getTorneoPendienteJugador(UserLoginManager.getInstance().getBearerToken(), UserLoginManager.getInstance().getJugador().getId());

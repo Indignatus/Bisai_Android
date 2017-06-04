@@ -32,7 +32,7 @@ public class TorneosFinalizados extends AppCompatActivity implements TorneoCallb
 
         //al clicar encima de uno de los equipos
 
-        TorneoManager.getInstance().getAllTorneos(TorneosFinalizados.this);
+        TorneoManager.getInstance().getBusquedaTorneoAcabado(TorneosFinalizados.this);
     }
 
     @Override
