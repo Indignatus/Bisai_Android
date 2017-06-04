@@ -8,7 +8,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
     tools:context="com.bisai.bisai.controller.activities.master_detail.TorneoListActivity">
 
     <TextView
