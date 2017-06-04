@@ -11,56 +11,56 @@
     tools:context="com.bisai.bisai.controller.activities.master_detail.AddPlayerActivity">
 
     <Button
-        android:text="Crear Equipo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="147dp"
         android:id="@+id/addEquipo"
-        android:layout_below="@+id/nameEquipo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:elevation="0dp" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/nameEquipo"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
+        android:layout_below="@+id/nameEquipo"
+        android:layout_marginTop="147dp"
+        android:elevation="0dp"
+        android:text="Crear Equipo" />
+
+    <EditText
         android:id="@+id/pass"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Contraseña" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nameEquipo"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/nameEquipo"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Nombre del equipo" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginTop="18dp"
-        android:id="@+id/pass2"
-        android:layout_below="@+id/pass"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Repite la contraseña" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Nombre del equipo"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/pass"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Repite la contraseña"
+        android:inputType="textPersonName" />
 </RelativeLayout>

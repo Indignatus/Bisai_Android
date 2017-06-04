@@ -26,8 +26,9 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="-10dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-39dp" />
+
 
 
 </android.support.constraint.ConstraintLayout>

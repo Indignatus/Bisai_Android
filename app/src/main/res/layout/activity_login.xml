@@ -22,7 +22,8 @@
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/Base.Theme.AppCompat.Light">
 
         <LinearLayout
             android:id="@+id/username_login_form"
@@ -65,7 +66,7 @@
 
             <Button
                 android:id="@+id/user_log_in_button"
-                style="?android:textAppearanceSmall"
+                style="@android:style/Widget.Material.Light.Button.Inset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -75,7 +76,7 @@
 
             <Button
                 android:id="@+id/register_button"
-                style="?android:textAppearanceSmall"
+                style="@android:style/Widget.Material.Light.Button.Inset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

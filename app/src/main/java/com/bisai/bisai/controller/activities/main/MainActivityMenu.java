@@ -27,6 +27,7 @@ import com.bisai.bisai.controller.activities.master_detail.AddPlayerActivity;
 import com.bisai.bisai.controller.activities.master_detail.MostrarEquipoGanador;
 import com.bisai.bisai.controller.activities.master_detail.TeamListActivity;
 import com.bisai.bisai.controller.activities.master_detail.TeamPlayerListActivity;
+import com.bisai.bisai.controller.activities.master_detail.TorneoDetailPendientes;
 import com.bisai.bisai.controller.activities.master_detail.TorneoListActivity;
 import com.bisai.bisai.controller.activities.master_detail.TorneosFinalizados;
 import com.bisai.bisai.controller.managers.TeamManager;
@@ -194,8 +195,13 @@ public class MainActivityMenu extends AppCompatActivity
                 listaTorneos.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        Intent a = new Intent(MainActivityMenu.this, MostrarEquipoGanador.class);
-                        a.putExtra("ganador", torneos.get(i).getEquipoGanador().getNombre());
+                        Intent a = new Intent(MainActivityMenu.this, TorneoDetailPendientes.class);
+                        a.putExtra("nombre", torneos.get(i).getNombre());
+                        a.putExtra("descripcion", torneos.get(i).getDescripcion());
+
+                        a.putExtra("fecha", torneos.get(i).getFechaInicio());
+                        a.putExtra("juego", torneos.get(i).getJuego().getNombre());
+                        a.putExtra("torneo", torneos.get(i).getId());
                         startActivity(a);
                     }
                 });
