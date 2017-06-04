@@ -59,7 +59,7 @@ public class TorneoManager {
         });
     }
     public synchronized void getBusquedaTorneos(final TorneoCallback torneoCallback){
-        Call<List<Torneo>> call = torneoService.getBusquedaTorneos(UserLoginManager.getInstance().getBearerToken());
+        Call<List<Torneo>> call = torneoService.getBusquedaTorneos( UserLoginManager.getInstance().getJugador().getId(), UserLoginManager.getInstance().getBearerToken());
         call.enqueue(new Callback<List<Torneo>>() {
             @Override
             public void onResponse(Call<List<Torneo>> call, Response<List<Torneo>> response) {

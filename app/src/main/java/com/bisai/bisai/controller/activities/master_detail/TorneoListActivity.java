@@ -15,6 +15,9 @@ import android.widget.TextView;
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.managers.TorneoCallback;
 import com.bisai.bisai.controller.managers.TorneoManager;
+import com.bisai.bisai.controller.managers.UserLoginManager;
+import com.bisai.bisai.model.Equipo;
+import com.bisai.bisai.model.Jugador;
 import com.bisai.bisai.model.Torneo;
 
 import java.util.ArrayList;
