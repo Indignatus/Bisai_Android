@@ -61,7 +61,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp"
         android:layout_weight="0.05"
-        android:text="Button"
+        android:text="Unirse al torneo"
         android:theme="@android:style/Theme.Wallpaper" />
 
 
