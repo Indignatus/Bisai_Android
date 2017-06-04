@@ -8,7 +8,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
     tools:context="com.bisai.bisai.controller.activities.master_detail.TorneoListActivity">
 
     <TextView
@@ -61,8 +60,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp"
         android:layout_weight="0.05"
-        android:text="Unirse al torneo"
-        android:theme="@android:style/Theme.Wallpaper" />
+        android:text="Unirse al torneo" />
 
 
 </RelativeLayout>
