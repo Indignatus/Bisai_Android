@@ -40,6 +40,7 @@ public class TorneoDetailPendientes extends AppCompatActivity implements TorneoC
         equipos = new ArrayList<>();
         nombreTorneo = extras.getString("nombre");
         descripcionTorneo = extras.getString("descripcion");
+
         fechaTorneo = extras.getString("fecha");
         nombreJuegoTorneo = extras.getString("juego");
         listaEquipos = (ListView) findViewById(R.id.listaEquiposInscritosTorneo);

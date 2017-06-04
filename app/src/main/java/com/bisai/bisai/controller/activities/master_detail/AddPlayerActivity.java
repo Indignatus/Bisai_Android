@@ -80,7 +80,7 @@ public class AddPlayerActivity extends AppCompatActivity implements TeamCallback
             // cambiar de color en rojo las contraseñas
         }
         if(pass.equals("")){
-            pasword.setError("La contraseña no puede estar vacía");
+            pasword.setError("La contraseña no puede estar vacío");
             focusView = pasword;
             cancel = true;
         }
