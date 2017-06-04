@@ -19,15 +19,16 @@
 
     <TextView
         android:id="@+id/ganador"
-        android:layout_width="405dp"
-        android:layout_height="328dp"
+        android:layout_width="302dp"
+        android:layout_height="353dp"
         android:paddingLeft="60dp"
         android:paddingTop="220dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="50sp"
+        android:textSize="45sp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-39dp" />
+        tools:layout_editor_absoluteY="-2dp" />
 
 
 
