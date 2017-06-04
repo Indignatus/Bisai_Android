@@ -198,8 +198,10 @@ public class MainActivityMenu extends AppCompatActivity
                         Intent a = new Intent(MainActivityMenu.this, TorneoDetailPendientes.class);
                         a.putExtra("nombre", torneos.get(i).getNombre());
                         a.putExtra("descipcion", torneos.get(i).getDescripcion());
+
                         a.putExtra("fecha", torneos.get(i).getFechaInicio());
                         a.putExtra("juego", torneos.get(i).getJuego().getNombre());
+                        a.putExtra("torneo", torneos.get(i).getId());
                         startActivity(a);
                     }
                 });

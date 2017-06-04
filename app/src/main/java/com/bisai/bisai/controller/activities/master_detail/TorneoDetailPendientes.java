@@ -13,11 +13,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bisai.bisai.R;
+import com.bisai.bisai.controller.activities.main.MainActivityMenu;
 import com.bisai.bisai.controller.managers.TorneoCallback;
 import com.bisai.bisai.controller.managers.TorneoManager;
 import com.bisai.bisai.model.Equipo;
 import com.bisai.bisai.model.Torneo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TorneoDetailPendientes extends AppCompatActivity implements TorneoCallback {
@@ -35,6 +37,7 @@ public class TorneoDetailPendientes extends AppCompatActivity implements TorneoC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_torneo_detail_pendientes);
         extras = getIntent().getExtras();
+        equipos = new ArrayList<>();
         nombreTorneo = extras.getString("nombre");
         descripcionTorneo = extras.getString("descripcion");
         fechaTorneo = extras.getString("fecha");
@@ -46,9 +49,22 @@ public class TorneoDetailPendientes extends AppCompatActivity implements TorneoC
         TextView fechaT = (TextView) findViewById(R.id.fecha);
         TextView juegoT = (TextView) findViewById(R.id.juego);
         nameT.setText(nombreTorneo);
+        String fechaBuena = fechaTorneo.substring(0,10);
         descriptionT.setText("Descripcion del Torneo: "+descripcionTorneo);
-        fechaT.setText("Fecha inicio del torneo: "+fechaTorneo);
+        fechaT.setText("Fecha inicio del torneo: "+fechaBuena);
         juegoT.setText("Este torneo es sobre el Juego: "+nombreJuegoTorneo);
+
+        final Long torneoId = extras.getLong("torneo");
+        TorneoManager.getInstance().getTorneoById(torneoId, TorneoDetailPendientes.this);
+
+        Button button = (Button) findViewById(R.id.menuPrincipalRegreso);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(TorneoDetailPendientes.this, MainActivityMenu.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -58,8 +74,6 @@ public class TorneoDetailPendientes extends AppCompatActivity implements TorneoC
 
     @Override
     public void onSuccessTorneo(Torneo torneo) {
-        final Long torneoId = extras.getLong("torneo");
-        TorneoManager.getInstance().getTorneoById(torneoId, TorneoDetailPendientes.this);
 
         this.torneo = torneo;
         this.equipos = torneo.getEquipos();
@@ -109,7 +123,7 @@ public class TorneoDetailPendientes extends AppCompatActivity implements TorneoC
             }
 
 
-            TorneoDetail.EquiposAdapter.ViewHolder holder = (TorneoDetail.EquiposAdapter.ViewHolder) myView.getTag();
+            EquiposAdapter.ViewHolder holder = (EquiposAdapter.ViewHolder) myView.getTag();
 
             //Voy asignando los datos
             Equipo equipo = torneo.getEquipos().get(position);
