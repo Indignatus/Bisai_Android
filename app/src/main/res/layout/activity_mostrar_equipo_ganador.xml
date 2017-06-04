@@ -29,13 +29,6 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-39dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher - crown"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="335dp" />
 
 
 </android.support.constraint.ConstraintLayout>

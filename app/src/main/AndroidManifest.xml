@@ -42,7 +42,8 @@
             android:label="@string/title_activity_main_menu"
             android:theme="@style/AppTheme" />
         <activity android:name=".controller.activities.master_detail.TorneosFinalizados" />
-        <activity android:name=".controller.activities.master_detail.MostrarEquipoGanador"></activity>
+        <activity android:name=".controller.activities.master_detail.MostrarEquipoGanador" />
+        <activity android:name=".controller.activities.master_detail.TorneoDetailPendientes"></activity>
     </application>
 
 </manifest>
