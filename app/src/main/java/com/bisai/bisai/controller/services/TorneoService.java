@@ -20,6 +20,10 @@ public interface TorneoService {
     Call<List<Torneo>> getAllTorneos(
             @Header("Authorization") String Authorization
     );
+    @GET("/api/torneos/busqueda")
+    Call<List<Torneo>> getBusquedaTorneos(
+            @Header("Authorization") String Authorization
+    );
     @GET ("/api/torneos/{id}")
     Call<Torneo> getTorneoById(
             @Header("Authorization") String Authorization, @Path("id") Long id

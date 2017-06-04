@@ -36,7 +36,7 @@ public class TorneoListActivity extends AppCompatActivity implements TorneoCallb
         listaTorneos = (ListView) findViewById(R.id.listatorneos);
         //al clicar encima de uno de los equipos
 
-        TorneoManager.getInstance().getAllTorneos(TorneoListActivity.this);
+        TorneoManager.getInstance().getBusquedaTorneos(TorneoListActivity.this);
     }
 
     @Override
