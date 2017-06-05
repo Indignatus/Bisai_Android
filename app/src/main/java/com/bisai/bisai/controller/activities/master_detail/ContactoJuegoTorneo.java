@@ -20,7 +20,7 @@ public class ContactoJuegoTorneo extends AppCompatActivity {
         String[] to = { "bisai.sad@bisai.com"};
         String[] cc = { "" };
         enviar(to, cc, "",
-                "Esto es un email enviado desde una app de Android");
+                "");
     }
 
     private void enviar(String[] to, String[] cc, String asunto, String mensaje) {
