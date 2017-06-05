@@ -25,6 +25,10 @@ public interface TeamService {
     Call<Equipo> getEquipoById(
             @Header("Authorization") String Authorization, @Path("id") Long id
     );
+    @GET ("/api/equipos/filtro/{palabra}")
+    Call<List<Equipo>> getAllTorneosBuscar(
+            @Header("Authorization") String Authorization, @Path("palabra") String palabra
+    );
 
     // post
 

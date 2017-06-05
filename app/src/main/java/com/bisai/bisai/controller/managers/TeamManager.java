@@ -95,6 +95,28 @@ public class TeamManager {
         });
 
     }
+    public synchronized void getAllTorneosBuscar(String palabra, final TeamCallback teamCallback){
+
+        Call<List<Equipo>> call = teamService.getAllTorneosBuscar(UserLoginManager.getInstance().getBearerToken(), palabra);
+        call.enqueue(new Callback<List<Equipo>>() {
+            @Override
+            public void onResponse(Call<List<Equipo>> call, Response<List<Equipo>> response) {
+                equipoList = response.body();
+                int code = response.code();
+                if(code == 200 || code == 201){
+                    teamCallback.onSuccessTeams(equipoList);
+                }else {
+                    teamCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Equipo>> call, Throwable t) {
+                Log.e("TeamManager->",t.toString());
+                teamCallback.onFailure(t);
+            }
+        });
+    }
 
     //POST
 

@@ -31,4 +31,14 @@
         </menu>
     </item>
 
+    <item android:title="Contacto">
+        <menu>
+            <item
+                android:id="@+id/nav_contacto"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Petición Juego/Torneo" />
+
+        </menu>
+    </item>
+
 </menu>

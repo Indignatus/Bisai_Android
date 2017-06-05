@@ -129,6 +129,9 @@ public class MainActivityMenu extends AppCompatActivity
         }else if(id == R.id.nav_buscar_resultado_torneos){
             Intent i = new Intent(MainActivityMenu.this, TorneosFinalizados.class);
             startActivity(i);
+        }else if(id == R.id.nav_contacto){
+            Intent i = new Intent(MainActivityMenu.this, TorneosFinalizados.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

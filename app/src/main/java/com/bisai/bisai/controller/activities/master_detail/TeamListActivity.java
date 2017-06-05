@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -35,6 +37,20 @@ public class TeamListActivity extends AppCompatActivity implements TeamCallback 
         // al clicar encima de uno de los equipos
 
         TeamManager.getInstance().getAllTeams(TeamListActivity.this);
+        final EditText textoBuscar = (EditText) findViewById(R.id.textoBuscadorEquipos);
+        Button button = (Button) findViewById(R.id.buscadorEquipos);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+String palabraPalabradora = textoBuscar.getText().toString();
+                if(palabraPalabradora.equals("")){
+                    TeamManager.getInstance().getAllTeams(TeamListActivity.this);
+                }else{
+                    TeamManager.getInstance().getAllTorneosBuscar(palabraPalabradora,TeamListActivity.this);
+                }
+
+            }
+        });
     }
 
     @Override
