@@ -36,14 +36,7 @@ public class TorneosFinalizados extends AppCompatActivity implements TorneoCallb
 
         TorneoManager.getInstance().getBusquedaTorneoAcabado(TorneosFinalizados.this);
 
-        Button button = (Button) findViewById(R.id.regresoMenuPrincipal);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(TorneosFinalizados.this, MainActivityMenu.class);
-                startActivity(i);
-            }
-        });
+
     }
 
     @Override
