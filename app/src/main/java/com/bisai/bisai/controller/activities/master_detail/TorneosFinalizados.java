@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bisai.bisai.R;
+import com.bisai.bisai.controller.activities.main.MainActivityMenu;
 import com.bisai.bisai.controller.managers.TorneoCallback;
 import com.bisai.bisai.controller.managers.TorneoManager;
 import com.bisai.bisai.model.Torneo;
@@ -33,6 +35,8 @@ public class TorneosFinalizados extends AppCompatActivity implements TorneoCallb
         //al clicar encima de uno de los equipos
 
         TorneoManager.getInstance().getBusquedaTorneoAcabado(TorneosFinalizados.this);
+
+
     }
 
     @Override
