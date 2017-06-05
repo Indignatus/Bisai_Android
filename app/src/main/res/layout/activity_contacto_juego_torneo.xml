@@ -20,7 +20,6 @@
         android:id="@+id/textView3"
         android:layout_width="381dp"
         android:layout_height="371dp"
-        android:paddingLeft="10dp"
         android:paddingTop="250dp"
         android:text="Si desea enviar una petición para solicitar un torneo nuevo asociado a un juego existente o otro juego que tengas pensado...    Envialo! Y en breves un administrador de la aplicación te lo creará.    Gracias por tu colaboración"
         android:textAlignment="center"
