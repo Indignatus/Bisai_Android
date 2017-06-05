@@ -43,7 +43,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".controller.activities.master_detail.TorneosFinalizados" />
         <activity android:name=".controller.activities.master_detail.MostrarEquipoGanador" />
-        <activity android:name=".controller.activities.master_detail.TorneoDetailPendientes"></activity>
+        <activity android:name=".controller.activities.master_detail.TorneoDetailPendientes" />
+        <activity android:name=".controller.activities.master_detail.ContactoJuegoTorneo"></activity>
     </application>
 
 </manifest>

@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.bisai.bisai.R;
 import com.bisai.bisai.controller.activities.login.LoginActivity;
 import com.bisai.bisai.controller.activities.master_detail.AddPlayerActivity;
+import com.bisai.bisai.controller.activities.master_detail.ContactoJuegoTorneo;
 import com.bisai.bisai.controller.activities.master_detail.MostrarEquipoGanador;
 import com.bisai.bisai.controller.activities.master_detail.TeamListActivity;
 import com.bisai.bisai.controller.activities.master_detail.TeamPlayerListActivity;
@@ -130,7 +131,7 @@ public class MainActivityMenu extends AppCompatActivity
             Intent i = new Intent(MainActivityMenu.this, TorneosFinalizados.class);
             startActivity(i);
         }else if(id == R.id.nav_contacto){
-            Intent i = new Intent(MainActivityMenu.this, TorneosFinalizados.class);
+            Intent i = new Intent(MainActivityMenu.this, ContactoJuegoTorneo.class);
             startActivity(i);
         }
 
