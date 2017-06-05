@@ -86,12 +86,14 @@ public class SeleccionEquipoForJoinTeam extends AppCompatActivity implements Tea
 
     @Override
     public void onSuccessTorneo(Torneo torneo) {
-
+        Toast toast1 = Toast.makeText(getApplicationContext(), "Exito al añadir el equipo '", Toast.LENGTH_SHORT);
+        toast1.show();
     }
 
     @Override
     public void onFailure(Throwable t) {
-
+        Toast toast1 = Toast.makeText(getApplicationContext(), "Error al registrarse al torneo", Toast.LENGTH_SHORT);
+        toast1.show();
     }
 
     public class TeamsAdapter extends BaseAdapter {
@@ -137,12 +139,11 @@ public class SeleccionEquipoForJoinTeam extends AppCompatActivity implements Tea
                 listaEquipos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        Toast toast1 = Toast.makeText(getApplicationContext(), "Exito al añadir el equipo '"+equipos.get(i).getNombre()+"' en el torneo ", Toast.LENGTH_SHORT);
                         long idEquipo = equipos.get(i).getId();
                         Intent a = new Intent(SeleccionEquipoForJoinTeam.this, MainActivityMenu.class);
                         TorneoManager.getInstance().addEquipoTorneo(SeleccionEquipoForJoinTeam.this, torneoId, idEquipo);
                         startActivity(a);
-                        toast1.show();
+
 
                     }
                 });
